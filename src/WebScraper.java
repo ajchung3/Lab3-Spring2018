@@ -24,7 +24,7 @@ public class WebScraper {
         String contents = urlScanner.useDelimiter("\\A").next();
         wordCount = contents.split(" ");
         for (int i = 0; i < wordCount.length; i++) {
-            if (wordCount[i].equalsIgnoreCase("prince") || wordCount[i].equalsIgnoreCase("prince,")||wordCount[i].equalsIgnoreCase("prince.")) {
+            if (wordCount[i].toLowerCase().contains("prince")) {
                 princeCount++;
             }
         }
